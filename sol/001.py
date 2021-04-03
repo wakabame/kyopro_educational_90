@@ -27,6 +27,6 @@ def binary_search(ok, ng):
     return ok
 
 ok = 0
-ng = 10**5
+ng = L + 1
 
-print(binary_search(ok, ng) )
+print(binary_search(ok, ng))
