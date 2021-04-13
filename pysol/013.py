@@ -28,12 +28,12 @@ for _ in range(M):
     a, b, c = map(int, input().split())
     adj[a-1] += [(b-1, c)]
     adj[b-1] += [(a-1, c)]
-     
+
 distance_from_start = [float("inf") for i in range(N)] # 頂点 i までの最短距離
 distance_from_start[0] = 0
 distance_from_destination = [float("inf") for i in range(N)] # 頂点 i までの最短距離
 distance_from_destination[N-1] = 0
-     
+
 confirm = [False] * N # 頂点までの距離が確定しているか
 # hq は [頂点kまでの最短距離, 頂点k] を要素に持つ
 # ヒープキューのソートキーにするため、最短距離が第一変数
