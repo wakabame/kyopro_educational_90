@@ -9,4 +9,3 @@ for a in A:
 
 for h in range(H):
     print(*[H_table[h] + W_table[w] - A[h][w] for w in range(W)])
-    

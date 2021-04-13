@@ -28,5 +28,3 @@ for _ in range(Q):
         print(min(abs(b - A[best_index]), abs(b- A[best_index+1])))
     else:
         print(abs(b - A[best_index]))
-
-
