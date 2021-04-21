@@ -25,6 +25,8 @@ def solve():
             ans += comb(N - (k-1) * (a-1),a)
             ans %= P
             a += 1
+            if N < (k-1) * (a-1):
+                break
         print(ans)
 
 solve()

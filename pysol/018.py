@@ -16,7 +16,7 @@ def horizontal_length(pt1, pt2):
     y_diff = pt1[1] - pt2[1]
     return (x_diff ** 2 + y_diff ** 2)**0.5
 
-for _ in range(T):
+for _ in range(Q):
     E = int(input())
     theta = E * 2*pi/T - pi/2
     h = horizontal_length((X,Y,0), theta_to_place(theta))
