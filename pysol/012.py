@@ -54,7 +54,7 @@ class UnionFind():
 
 def get_number(xy):
     x, y = xy
-    return (x-1)*(W-1) + (y-1)
+    return (x-1)*W + (y-1)
 
 def get_neighbors(xy):
     x, y = xy
@@ -78,7 +78,6 @@ for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 1:
         n = get_number(q)
-        print(f"print: {n} ({q})")
         uf.red[n] = True
         neighbor_nums = get_neighbors(q)
         for k in neighbor_nums:
@@ -88,7 +87,6 @@ for _ in range(Q):
         xa, ya, xb, yb = q
         a = get_number((xa, ya))
         b = get_number((xb, yb))
-        print(f"asked: {a}, {b}, ({q})")
         if uf.same(a, b) and uf.red[a]:
             print("Yes")
         else:
