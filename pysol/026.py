@@ -12,6 +12,8 @@ even = [0]
 st = [[0,0]]
 visited = [True] + [False] * (N-1)
 
+# DFS で0からの距離を計算する.
+# 0 からの距離が偶数ならeven 奇数ならodd に拠点のindexを追加する
 while st:
     u, d = st.pop()
     for v in edges[u]:
