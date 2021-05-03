@@ -6,4 +6,4 @@ for i in range(N):
     if s in se:
         continue
     se.add(s)
-    print(i+1)
+    print(i + 1)

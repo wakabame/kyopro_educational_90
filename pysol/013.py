@@ -21,20 +21,21 @@ i = 1, 2, 3, ..., N それぞれについて、i 日目に交差点 1 から交�
 # ダイクストラで「頂点iから頂点Nまでの距離」をを計算しておく
 
 from heapq import heappush, heappop
+
 N, M = map(int, input().split())
 
-adj = [[] for i in range(N)] # 始点を i とするedgeの集合
+adj = [[] for i in range(N)]  # 始点を i とするedgeの集合
 for _ in range(M):
     a, b, c = map(int, input().split())
-    adj[a-1] += [(b-1, c)]
-    adj[b-1] += [(a-1, c)]
+    adj[a - 1] += [(b - 1, c)]
+    adj[b - 1] += [(a - 1, c)]
 
-distance_from_start = [float("inf") for i in range(N)] # 頂点 i までの最短距離
+distance_from_start = [float("inf") for i in range(N)]  # 頂点 i までの最短距離
 distance_from_start[0] = 0
-distance_from_destination = [float("inf") for i in range(N)] # 頂点 i までの最短距離
-distance_from_destination[N-1] = 0
+distance_from_destination = [float("inf") for i in range(N)]  # 頂点 i までの最短距離
+distance_from_destination[N - 1] = 0
 
-confirm = [False] * N # 頂点までの距離が確定しているか
+confirm = [False] * N  # 頂点までの距離が確定しているか
 # hq は [頂点kまでの最短距離, 頂点k] を要素に持つ
 # ヒープキューのソートキーにするため、最短距離が第一変数
 hq = [(0, 0)]
@@ -49,8 +50,8 @@ while hq:
             distance_from_start[w] = d + c
             heappush(hq, (distance_from_start[w], w))
 
-confirm = [False] * N # 頂点までの距離が確定しているか
-hq = [(0, N-1)]
+confirm = [False] * N  # 頂点までの距離が確定しているか
+hq = [(0, N - 1)]
 # ダイクストラ法
 while hq:
     d, v = heappop(hq)

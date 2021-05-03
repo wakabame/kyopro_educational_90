@@ -1,4 +1,5 @@
 from math import atan2, pi
+
 N = int(input())
 
 XY = []
@@ -14,10 +15,10 @@ for i in range(N):
         if i == j:
             continue
         x1, y1 = XY[j]
-        theta = atan2(y1 - y0, x1 - x0)*180/pi
+        theta = atan2(y1 - y0, x1 - x0) * 180 / pi
         thetas += [theta]
     thetas.sort()
-    for j in range(N-1):
+    for j in range(N - 1):
         thetas += [thetas[j] + 360]
     i, j = 0, 0
     curr = 0

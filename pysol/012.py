@@ -1,7 +1,8 @@
 # グラフの連結を union-find を使って判定する
 from collections import defaultdict
 
-class UnionFind():
+
+class UnionFind:
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -50,29 +51,32 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
+        return "\n".join(f"{r}: {m}" for r, m in self.all_group_members().items())
+
 
 def get_number(xy):
     x, y = xy
-    return (x-1)*W + (y-1)
+    return (x - 1) * W + (y - 1)
+
 
 def get_neighbors(xy):
     x, y = xy
     ret = []
     if x > 1:
-        ret += [get_number((x-1, y))]
+        ret += [get_number((x - 1, y))]
     if x < H:
-        ret += [get_number((x+1, y))]
+        ret += [get_number((x + 1, y))]
     if y > 1:
-        ret += [get_number((x, y-1))]
+        ret += [get_number((x, y - 1))]
     if y < W:
-        ret += [get_number((x, y+1))]
+        ret += [get_number((x, y + 1))]
     return ret
+
 
 H, W = map(int, input().split())
 Q = int(input())
 
-uf = UnionFind(H*W)
+uf = UnionFind(H * W)
 
 for _ in range(Q):
     t, *q = map(int, input().split())

@@ -14,17 +14,17 @@ for i in range(1001):
     for j in range(1001):
         cumsum_table[i][j] += table[i][j]
         if i > 0:
-            cumsum_table[i][j] += cumsum_table[i-1][j]
+            cumsum_table[i][j] += cumsum_table[i - 1][j]
         if j > 0:
-            cumsum_table[i][j] += cumsum_table[i][j-1]
+            cumsum_table[i][j] += cumsum_table[i][j - 1]
         if i > 0 and j > 0:
-            cumsum_table[i][j] -= cumsum_table[i-1][j-1]
+            cumsum_table[i][j] -= cumsum_table[i - 1][j - 1]
 
 
-ans = [0 for i in range(N+1)]
+ans = [0 for i in range(N + 1)]
 for i in range(1001):
     for j in range(1001):
         ans[cumsum_table[i][j]] += 1
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     print(ans[i])

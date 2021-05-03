@@ -1,5 +1,6 @@
 N = int(input())
 
+
 def valid_parenthesis(parenthesis_string):
     cnt = 0
     for i in range(len(parenthesis_string)):
@@ -12,6 +13,7 @@ def valid_parenthesis(parenthesis_string):
     if cnt != 0:
         return False
     return True
+
 
 ans_list = []
 for i in range(1 << N):

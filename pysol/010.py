@@ -13,4 +13,4 @@ Q = int(input())
 
 for _ in range(Q):
     l, r = map(int, input().split())
-    print(A[r] - A[l-1], B[r] - B[l-1])
+    print(A[r] - A[l - 1], B[r] - B[l - 1])

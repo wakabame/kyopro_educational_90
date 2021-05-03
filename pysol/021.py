@@ -9,9 +9,11 @@ N, M = map(int, input().split())
 
 edge = np.array([input().split() for _ in range(M)], dtype=np.int64).T
 tmp = np.ones(M, dtype=np.int64).T
-graph = csr_matrix((tmp, (edge[:]-1)), (N, N))
+graph = csr_matrix((tmp, (edge[:] - 1)), (N, N))
 
-component_count, labels = connected_components(graph, directed=True, connection='strong')
+component_count, labels = connected_components(
+    graph, directed=True, connection="strong"
+)
 
-ans = sum([v*(v-1)//2 for v in Counter(labels).values()])
+ans = sum([v * (v - 1) // 2 for v in Counter(labels).values()])
 print(ans)

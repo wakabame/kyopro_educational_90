@@ -1,4 +1,5 @@
 import numpy as np
+
 N, B, K = map(int, input().split())
 C = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
@@ -22,7 +23,7 @@ def power_matrix_under_mod(mat, n, p):
 dp_matrix = np.zeros((B, B), dtype=object)
 for b in range(B):
     for c in C:
-        b_ = (10 * b + c)%B
+        b_ = (10 * b + c) % B
         dp_matrix[b][b_] += 1
 
 print(power_matrix_under_mod(dp_matrix, N, MOD)[0][0])

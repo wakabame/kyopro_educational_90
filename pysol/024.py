@@ -6,7 +6,7 @@ diff = 0
 for i in range(N):
     diff += abs(A[i] - B[i])
 
-if diff <= K and (K-diff)%2 == 0:
+if diff <= K and (K - diff) % 2 == 0:
     print("Yes")
 else:
     print("No")

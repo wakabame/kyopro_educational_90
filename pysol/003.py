@@ -1,9 +1,9 @@
 N = int(input())
 path = [[] for i in range(N)]
-for i in range(N-1):
+for i in range(N - 1):
     a, b = map(int, input().split())
-    path[a-1] += [b-1]
-    path[b-1] += [a-1]
+    path[a - 1] += [b - 1]
+    path[b - 1] += [a - 1]
 
 # 木の直径を出すには最短距離計算を2回行う
 # 一度目は, 適当な頂点を根と見なして, そこから最も遠い頂点 = 直径の端点をみつける
@@ -20,9 +20,9 @@ while next_vec:
     for v in path[u]:
         if visited[v]:
             continue
-        distance_from_zero[v] = d+1
+        distance_from_zero[v] = d + 1
         visited[v] = True
-        next_vec.append((v, d+1))
+        next_vec.append((v, d + 1))
 
 root_index = distance_from_zero.index(max(distance_from_zero))
 
@@ -37,8 +37,8 @@ while next_vec:
     for v in path[u]:
         if visited[v]:
             continue
-        distance_from_zero[v] = d+1
+        distance_from_zero[v] = d + 1
         visited[v] = True
-        next_vec.append((v, d+1))
+        next_vec.append((v, d + 1))
 
 print(max(distance_from_zero) + 1)
