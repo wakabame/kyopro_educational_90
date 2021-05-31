@@ -45,11 +45,27 @@
 <br />
 
 ## 難易度投票について（2021.4.2 追記）
-管理者の難易度判定は完璧なものではなく、現状 ± 1 段階程度ずれることがあります。
-そこで、皆さんにより正確な難易度を知っていただければと思い、難易度投票スプレッドシートを追加しました。
-皆さん投票よろしくお願いします。
+管理者の難易度判定は完璧なものではなく、現状 ± 1 段階程度ずれることがあります。  
+そこで、皆さんにより正確な難易度を知っていただければと思い、難易度投票スプレッドシートを追加しました。  
+皆さん投票よろしくお願いします。  
 
-- [「競プロ典型90問」非公式難易度表](https://docs.google.com/spreadsheets/d/1GG4Higis4n4GJBViVltjcbuNfyr31PzUY_ZY1zh2GuI/edit#gid=0)
+- [「競プロ典型90問」非公式難易度表・ソースコード共有](https://docs.google.com/spreadsheets/d/1GG4Higis4n4GJBViVltjcbuNfyr31PzUY_ZY1zh2GuI/edit#gid=0)
+
+<br />
+
+## 他言語などのソースコード共有について（2021.5.31 追記）
+現在、C++ 以外の言語のソースコードが見られないこと、そして色々な解法や実装を見比べられないことが、重要な課題となっています。  
+皆さん、AC が出て**解説が公開されたら**、ソースコードを共有していきましょう。  
+共有方法については、「ホーム」の下部に書かれていますので、それをご覧ください。  
+
+- [「競プロ典型90問」非公式難易度表・ソースコード共有](https://docs.google.com/spreadsheets/d/1GG4Higis4n4GJBViVltjcbuNfyr31PzUY_ZY1zh2GuI/edit#gid=0)
+
+<br />
+
+## テストケースについて（2021.5.31 追記）
+解説公開後、テストケースが順次公開されていきます。リンクはこちらです。
+
+* [「競プロ典型90問」テストケース](https://www.dropbox.com/sh/nx3tnilzqz7df8a/AAC-L790bxKBVkmB6pdMUgk4a/typical90?dl=0&subfolder_nav_tracking=1)
 
 <br />
 
