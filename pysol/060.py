@@ -17,9 +17,8 @@ def LIS(L):
 increase_seq = LIS(A)
 decreace_seq = LIS(A[::-1])
 
-
 ans = 0
 for i in range(N):
-    print(increase_seq[i], decreace_seq[N-1-i])
+    ans = max(ans, increase_seq[i] + decreace_seq[N-1-i] - 1)
 
 print(ans)
